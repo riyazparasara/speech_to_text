@@ -1,0 +1,32 @@
+# System
+.DS_Store
+.checkpoints/
+
+# Python / Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/transcription.db
+backend/.env
+
+# Uploads & Transcripts (Keep directories, ignore content)
+backend/uploads/*
+!backend/uploads/.gitkeep
+backend/transcripts/*
+!backend/transcripts/.gitkeep
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/npm-debug.log
+frontend/yarn-error.log
+
+# IDEs
+.idea/
+.vscode/
+
+# Docker
+docker/transcription.db

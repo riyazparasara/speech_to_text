@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../backend/uploads:/app/backend/uploads
+      - ../backend/transcripts:/app/backend/transcripts
+    environment:
+      - WHISPER_MODEL=turbo
+    restart: always
+
+  frontend:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.frontend
+    ports:
+      - "3000:80"
+    restart: always
